@@ -60,7 +60,7 @@ Este proyecto se distribuye bajo la licencia MIT. Puedes usarlo, modificarlo y a
 
 ## 👤 Autor
 
-- **Tu Nombre** — [@ttiziu](https://github.com/ttiziu)
+- **Jherry Visalot Girón** — [@ttiziu](https://github.com/ttiziu)
 
 ---
 
