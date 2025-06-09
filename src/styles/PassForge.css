@@ -1,0 +1,908 @@
+/* Estilos base para PassForge */
+.passforge-container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 2.5rem 2rem;
+  background: rgba(255,255,255,0.97);
+  border-radius: 16px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.passforge-container h1 {
+  color: #232b38;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.password-generator .options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.password-generator label {
+  color: #232b38;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.password-generator input[type="number"] {
+  width: 60px;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: #f4f4f4;
+  color: #232b38;
+  margin-left: 0.5rem;
+}
+
+.generate-btn {
+  background: #232b38;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2.2rem;
+  margin: 1.2rem 0 1.5rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.generate-btn:hover {
+  background: #3a4250;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.password-field {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: #f4f4f4;
+  color: #232b38;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.copy-btn {
+  background: #38a169;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+.copy-btn:hover {
+  background: #276749;
+}
+
+.strength-bar {
+  width: 90%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 0.3rem 0;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+
+.info {
+  margin-top: 1.5rem;
+  color: #232b38;
+  font-size: 1rem;
+  text-align: left;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  opacity: 0.95;
+  transition: background 0.2s, color 0.2s;
+}
+.info h4 {
+  margin-bottom: 0.7rem;
+  color: #232b38;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+body[data-theme='dark'] .info h4 {
+  color: #38e169;
+}
+.info ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.info li {
+  margin-bottom: 0.3rem;
+  color: #232b38;
+  opacity: 0.95;
+  transition: color 0.2s;
+}
+body[data-theme='dark'] .info li {
+  color: #f4f4f4;
+}
+
+.breach-checker {
+  margin: 1.2rem auto 0 auto;
+  text-align: center;
+}
+.breach-btn {
+  background: #232b38;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+  transition: background 0.2s;
+}
+.breach-btn:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+.breach-result {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+}
+.breach-found {
+  background: #ffe5e5;
+  color: #c53030;
+  border: 1px solid #c53030;
+}
+.breach-safe {
+  background: #e6fffa;
+  color: #276749;
+  border: 1px solid #38a169;
+}
+.breach-error {
+  color: #c53030;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.passphrase-generator {
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+.passphrase-generator h2 {
+  color: #232b38;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.pin-generator {
+  margin-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+.pin-generator h2 {
+  color: #232b38;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.password-history {
+  margin-top: 2rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  color: #232b38;
+  font-size: 1rem;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+.password-history h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.password-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+.history-type {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #888;
+}
+.history-value {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1.08rem;
+  color: #232b38;
+  background: #f4f4f4;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+.history-date {
+  font-size: 0.92rem;
+  color: #aaa;
+  margin-left: auto;
+}
+.clear-history-btn {
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+.clear-history-btn:hover {
+  background: #c53030;
+}
+
+.password-policies {
+  margin: 1.2rem auto 0 auto;
+  text-align: left;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  max-width: 350px;
+  font-size: 1rem;
+}
+.password-policies ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.policy-ok {
+  color: #38a169;
+  font-weight: 600;
+}
+.policy-fail {
+  color: #e53e3e;
+  font-weight: 600;
+}
+body[data-theme='dark'] .password-policies {
+  background: #23243a;
+  color: #f4f4f4;
+}
+body[data-theme='dark'] .policy-ok {
+  color: #38e169;
+}
+body[data-theme='dark'] .policy-fail {
+  color: #ff6b6b;
+}
+
+body[data-theme='dark'] {
+  background: #181924 !important;
+}
+body[data-theme='dark'] .passforge-container {
+  background: rgba(24, 25, 36, 0.98);
+  color: #f4f4f4;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.32);
+}
+body[data-theme='dark'] .passforge-container h1,
+body[data-theme='dark'] .passforge-container h2,
+body[data-theme='dark'] .passforge-container h3,
+body[data-theme='dark'] .passforge-container h4 {
+  color: #f4f4f4;
+}
+body[data-theme='dark'] .password-generator label,
+body[data-theme='dark'] .passphrase-generator label,
+body[data-theme='dark'] .pin-generator label {
+  color: #f4f4f4;
+}
+body[data-theme='dark'] .password-field,
+body[data-theme='dark'] .result,
+body[data-theme='dark'] .info,
+body[data-theme='dark'] .password-history,
+body[data-theme='dark'] .history-item {
+  background: #23243a !important;
+  color: #f4f4f4 !important;
+  border-color: #444 !important;
+}
+body[data-theme='dark'] .generate-btn,
+body[data-theme='dark'] .breach-btn {
+  background: #f4f4f4;
+  color: #232b38;
+}
+body[data-theme='dark'] .generate-btn:hover,
+body[data-theme='dark'] .breach-btn:hover {
+  background: #bbb;
+}
+body[data-theme='dark'] .copy-btn {
+  background: #38a169;
+  color: #fff;
+}
+body[data-theme='dark'] .copy-btn:hover {
+  background: #276749;
+}
+body[data-theme='dark'] .clear-history-btn {
+  background: #e53e3e;
+  color: #fff;
+}
+body[data-theme='dark'] .clear-history-btn:hover {
+  background: #c53030;
+}
+.theme-toggle-btn {
+  background: #232b38;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+.theme-toggle-btn:hover {
+  background: #3a4250;
+}
+
+.site-password-manager {
+  margin-top: 2rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  color: #232b38;
+  font-size: 1rem;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+.site-password-manager h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.site-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+  justify-content: center;
+}
+.site-form input[type="text"] {
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  background: #fff;
+  color: #232b38;
+}
+.site-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+.site-name {
+  font-weight: 600;
+  color: #2b6cb0;
+  min-width: 120px;
+}
+.site-password {
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1.08rem;
+  color: #232b38;
+  background: #f4f4f4;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+.site-date {
+  font-size: 0.92rem;
+  color: #aaa;
+  margin-left: auto;
+}
+.delete-btn {
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.delete-btn:hover {
+  background: #c53030;
+}
+body[data-theme='dark'] .site-password-manager,
+body[data-theme='dark'] .site-item {
+  background: #23243a !important;
+  color: #f4f4f4 !important;
+  border-color: #444 !important;
+}
+body[data-theme='dark'] .site-form input[type="text"] {
+  background: #23243a;
+  color: #f4f4f4;
+  border-color: #444;
+}
+body[data-theme='dark'] .site-name {
+  color: #63b3ed;
+}
+body[data-theme='dark'] .site-password {
+  background: #181924;
+  color: #f4f4f4;
+}
+body[data-theme='dark'] .delete-btn {
+  background: #e53e3e;
+  color: #fff;
+}
+body[data-theme='dark'] .delete-btn:hover {
+  background: #c53030;
+}
+
+.banner {
+  background: linear-gradient(90deg, #232b38 60%, #38a169 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 2.2rem 1.5rem 1.2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.10);
+  text-align: center;
+}
+.banner h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(44,44,44,0.18), 0 1px 0 #232b38;
+}
+body[data-theme='dark'] .banner h1 {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.32);
+}
+.banner p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.93;
+}
+.options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.option-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 2.2rem 1.5rem 1.2rem 1.5rem;
+  min-width: 220px;
+  max-width: 260px;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+  text-align: center;
+  position: relative;
+  border: 2px solid transparent;
+}
+.option-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 6px 32px rgba(56,161,105,0.18);
+  border: 2px solid #38a169;
+}
+.option-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.7rem;
+}
+.option-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #232b38;
+}
+.option-desc {
+  font-size: 1.05rem;
+  color: #444;
+  opacity: 0.93;
+}
+.option-content {
+  animation: fadeInUp 0.7s cubic-bezier(.23,1.01,.32,1) both;
+  margin-top: 1.5rem;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.back-btn {
+  background: #232b38;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  transition: background 0.2s;
+  box-shadow: 0 1px 4px rgba(56,161,105,0.08);
+  outline: none;
+  text-decoration: none;
+}
+.back-btn:hover {
+  background: #38a169;
+  text-decoration: none;
+}
+.back-btn:focus {
+  outline: none;
+  text-decoration: none;
+}
+body[data-theme='dark'] .banner {
+  background: linear-gradient(90deg, #181924 60%, #38a169 100%);
+  color: #fff;
+}
+body[data-theme='dark'] .option-card {
+  background: #23243a;
+  color: #f4f4f4;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  border: 2px solid transparent;
+}
+body[data-theme='dark'] .option-card:hover {
+  border: 2px solid #38a169;
+}
+body[data-theme='dark'] .option-title {
+  color: #f4f4f4;
+}
+body[data-theme='dark'] .option-desc {
+  color: #bbb;
+}
+
+/* Personalización visual para las tarjetas de generadores y gestor */
+.option-content > .password-generator,
+.option-content > .passphrase-generator,
+.option-content > .pin-generator,
+.option-content > .site-password-manager {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(56,161,105,0.10);
+  padding: 2.2rem 1.5rem 1.2rem 1.5rem;
+  margin: 0 auto 2.5rem auto;
+  max-width: 420px;
+  min-width: 260px;
+  transition: box-shadow 0.2s, background 0.2s;
+  position: relative;
+}
+.option-content > .password-generator:before,
+.option-content > .passphrase-generator:before,
+.option-content > .pin-generator:before,
+.option-content > .site-password-manager:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #38a169 0%, #232b38 100%);
+  opacity: 0.18;
+}
+body[data-theme='dark'] .option-content > .password-generator,
+body[data-theme='dark'] .option-content > .passphrase-generator,
+body[data-theme='dark'] .option-content > .pin-generator,
+body[data-theme='dark'] .option-content > .site-password-manager {
+  background: #23243a;
+  color: #f4f4f4;
+  box-shadow: 0 4px 32px rgba(24,25,36,0.32);
+}
+body[data-theme='dark'] .option-content > .password-generator:before,
+body[data-theme='dark'] .option-content > .passphrase-generator:before,
+body[data-theme='dark'] .option-content > .pin-generator:before,
+body[data-theme='dark'] .option-content > .site-password-manager:before {
+  background: linear-gradient(90deg, #38a169 0%, #181924 100%);
+  opacity: 0.22;
+}
+/* Títulos grandes y centrados para cada generador/gestor */
+.password-generator h2,
+.passphrase-generator h2,
+.pin-generator h2,
+.site-password-manager h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  color: #232b38;
+  text-align: center;
+}
+body[data-theme='dark'] .password-generator h2,
+body[data-theme='dark'] .passphrase-generator h2,
+body[data-theme='dark'] .pin-generator h2,
+body[data-theme='dark'] .site-password-manager h2 {
+  color: #38e169;
+}
+/* Mejoro los inputs y labels */
+.password-generator label,
+.passphrase-generator label,
+.pin-generator label,
+.site-password-manager label {
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #232b38;
+  margin-bottom: 0.5rem;
+}
+body[data-theme='dark'] .password-generator label,
+body[data-theme='dark'] .passphrase-generator label,
+body[data-theme='dark'] .pin-generator label,
+body[data-theme='dark'] .site-password-manager label {
+  color: #f4f4f4;
+}
+.password-generator input,
+.passphrase-generator input,
+.pin-generator input,
+.site-password-manager input {
+  border-radius: 8px;
+  border: 1.5px solid #bbb;
+  padding: 0.35rem 0.7rem;
+  font-size: 1.08rem;
+  background: #f8f9fa;
+  color: #232b38;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: border 0.2s;
+}
+body[data-theme='dark'] .password-generator input,
+body[data-theme='dark'] .passphrase-generator input,
+body[data-theme='dark'] .pin-generator input,
+body[data-theme='dark'] .site-password-manager input {
+  background: #23243a;
+  color: #f4f4f4;
+  border: 1.5px solid #444;
+}
+/* Botones grandes y modernos */
+.generate-btn,
+.copy-btn,
+.breach-btn,
+.delete-btn,
+.back-btn {
+  border-radius: 8px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  padding: 0.6rem 1.6rem;
+  margin: 0.5rem 0.3rem 0.5rem 0;
+  box-shadow: 0 1px 4px rgba(56,161,105,0.08);
+}
+
+.length-slider-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 220px;
+  margin-top: 0.2rem;
+}
+.length-slider {
+  flex: 1;
+  accent-color: #38a169;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #38a169 0%, #232b38 100%);
+  outline: none;
+  transition: background 0.2s;
+}
+.length-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -5px; /* Centra el círculo en la línea */
+  border-radius: 50%;
+  background: #38a169;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(56,161,105,0.18);
+  transition: background 0.2s, border 0.2s;
+  cursor: pointer;
+}
+.length-slider:focus::-webkit-slider-thumb {
+  border-color: #232b38;
+}
+.length-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #38a169;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(56,161,105,0.18);
+  transition: background 0.2s, border 0.2s;
+  cursor: pointer;
+}
+.length-slider::-ms-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #38a169;
+  border: 2.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(56,161,105,0.18);
+  transition: background 0.2s, border 0.2s;
+  cursor: pointer;
+}
+.length-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #38a169 0%, #232b38 100%);
+}
+.length-slider::-ms-fill-lower {
+  background: #38a169;
+}
+.length-slider::-ms-fill-upper {
+  background: #232b38;
+}
+.length-input {
+  width: 54px;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: #f4f4f4;
+  color: #232b38;
+}
+body[data-theme='dark'] .length-slider {
+  accent-color: #38e169;
+  background: linear-gradient(90deg, #38e169 0%, #181924 100%);
+}
+body[data-theme='dark'] .length-slider::-webkit-slider-thumb {
+  background: #38e169;
+  border: 2.5px solid #23243a;
+}
+body[data-theme='dark'] .length-slider:focus::-webkit-slider-thumb {
+  border-color: #38e169;
+}
+body[data-theme='dark'] .length-slider::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #38e169 0%, #181924 100%);
+}
+body[data-theme='dark'] .length-input {
+  background: #23243a;
+  color: #f4f4f4;
+  border: 1px solid #444;
+}
+.length-control-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 170px;
+  margin-right: 1.5rem;
+}
+.length-label {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #232b38;
+}
+body[data-theme='dark'] .length-label {
+  color: #f4f4f4;
+}
+.length-slider-group-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 160px;
+}
+.options-checkboxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.passphrase-options-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem 1.2rem;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+.passphrase-options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.separator-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #232b38;
+}
+body[data-theme='dark'] .separator-label {
+  color: #f4f4f4;
+}
+.lang-toggle-btn {
+  background: #232b38;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  transition: background 0.2s;
+}
+.lang-toggle-btn:hover {
+  background: #38a169;
+}
+body[data-theme='dark'] .lang-toggle-btn {
+  background: #38a169;
+  color: #23243a;
+}
+body[data-theme='dark'] .lang-toggle-btn:hover {
+  background: #232b38;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .password-generator .options {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .length-control-block {
+    margin-right: 0;
+    margin-bottom: 0.7rem;
+  }
+  .options-checkboxes {
+    gap: 0.7rem 1.2rem;
+  }
+  .passphrase-options-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .passphrase-options-group {
+    width: 100%;
+    align-items: center;
+  }
+}
